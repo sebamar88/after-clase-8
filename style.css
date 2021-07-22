@@ -1,0 +1,82 @@
+.cuadrado{
+  animation-name: movimiento-lateral;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;/*para que vuelva a su posicion inicial */
+  width: 100px;
+  background-color: Teal;
+  color: #fff;
+  position: relative;
+  padding: 50px;
+}
+
+@keyframes movimiento-lateral {
+  from {
+     left: 0px;
+  }
+  to {
+     left: 200px;
+  }
+}
+
+.cuadrado2{
+  margin-top:100px;
+  width: 250px;
+  height: 250px;
+  background-color: red;
+  position: relative;
+  animation-name: giro-lateral;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+@keyframes giro-lateral {
+  0% {
+     left: 0px;
+     transform: rotate(90deg);
+  }
+  50% {
+     background-color: green;
+     left: 300px;
+     transform: rotate(180deg);
+  }
+  100% {
+     background-color: blue;
+     left: 600px;
+  }
+}
+
+.mt-5{
+  margin-top: 6rem;
+}
+
+a{
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, #0073da, teal);
+  color: white;
+  font-weight: 600;
+  font-size: 2rem;
+  text-decoration: none;
+  border-bottom-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  transition: all ease-in-out 1s;
+}
+
+a:hover{
+  background: linear-gradient(to right, teal, #0073da);
+}
+
+#escala {
+  width: 80px;
+  height: 80px;
+  margin-top: 5rem;
+  background-color: skyblue;
+  transition: all ease-in-out 1s;
+}
+
+#escala:hover {
+  transform: scale(0.7); /* Igual que: scaleX(0.7) scaleY(0.7) */
+  background-color: pink;
+}
